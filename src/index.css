@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f5eedf;
+    --bg-secondary: #e8dbca;
+    --bg-card: #dfcfba;
+    --bg-dark-hero: #1e1c1a;
+    --text-primary: #211c17;
+    --text-secondary: #5a4e40;
+    --border-craft: #bca890;
+    --accent-brass: #b8863b;
+    --accent-hover: #9c6d2d;
+  }
+
+  .dark {
+    --bg-primary: #141312;
+    --bg-secondary: #1c1a17;
+    --bg-card: #26231f;
+    --bg-dark-hero: #0e0d0c;
+    --text-primary: #f4eee3;
+    --text-secondary: #a89d8d;
+    --border-craft: #3d3730;
+    --accent-brass: #d4a359;
+    --accent-hover: #e6b86f;
+  }
+
+  body {
+    font-family: 'Cinzel', 'Rokkitt', Georgia, Cambria, 'Times New Roman', serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, .font-craft-title {
+    font-family: 'Rokkitt', 'Cinzel', Georgia, serif;
+    letter-spacing: 0.08em;
+  }
+
+  .font-craft-mono {
+    font-family: 'Special Elite', 'JetBrains Mono', Courier, monospace;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Vintage Paper / Craft Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfae96;
+  border-radius: 2px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4239;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9f8c74;
+}
+
+/* Subtle antique kraft grain texture */
+.kraft-texture {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.dark .kraft-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
